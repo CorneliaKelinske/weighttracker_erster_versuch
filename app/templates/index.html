@@ -1,12 +1,11 @@
-<html>
 
-<head>
-    <title>{{ title }} - Weighttracker</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+{% extends "base.html" %}
 
-<body>
-    <h1>Hello, {{ user.username }}!</h1>
-</body>
+{% block content %}
+    <h1>Hi, {{user.username }}!</h1>
+    {% for post in posts %}
+    <div><p>{{ post.date.month }} {{post.date.day}} : {{post.weight}}</p></div>
+    {% endfor %}
+{% endblock %}
 
-</html>

@@ -8,7 +8,7 @@
     {% else %}
     <title>Welcome to Weighttracker</title>
     {% endif %}
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <div>Weighttracker: <a href="/index">Home</a></div>
